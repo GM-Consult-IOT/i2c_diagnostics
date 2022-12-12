@@ -30,7 +30,7 @@ class TwoWireDiagnostics {
     byte read8(byte address, byte reg); 
 
     /// @brief Returns an address string from the [address].
-    /// @param address The I2C address
+    /// @param address The I2C address to stringify.
     /// @return An address string from the [address].
     String getAddressString(byte address);
 
