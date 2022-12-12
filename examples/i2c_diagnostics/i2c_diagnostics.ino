@@ -1,15 +1,3 @@
-/**************************************************************************
- * Provides utilities for diagnosing the I2C bus and devices on it.
-
- * Aadapted from a sketch by Rui Santos 
- * (https://randomnerdtutorials.com/esp32-i2c-communication-arduino-ide/#2). 
-
- * This library is open-source under the BSD 3-Clause license and 
- * redistribution and use in source and binary forms, with or without 
- * modification, are permitted, provided that the license conditions are 
- * met.
-***************************************************************************/
-
 #include <Arduino.h>
 #include <inttypes.h>
 #include <Wire.h> 
@@ -33,22 +21,14 @@ void setup() {
  TwoWireDiagnostics i2cdiags = TwoWireDiagnostics(Wire);
 
   // The array that will be populated with the I2C addresses on the bus
-  String devices[9];
+  byte devices[9];
 
   // handshake with the serial port
   Serial.println("Starting scan of I2C bus"); 
 
-  // scan for all the i2c devices on the bus
-  i2cdiags.devices(devices); 
+  // scan for all the i2c devices on the bus, and echo the results to the serial port
+  i2cdiags.devices(devices, true); 
 
-  // loop through the devices
-  for (byte i = 0; i<devices->length(); i++){
-    String device = devices[i];
-    if (device!=""){
-      // display the address for each I2C device found
-      Serial.println("I2C Device at: " + devices[i]);
-    }
-  }
 }
 
 void loop() {
