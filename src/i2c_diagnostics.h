@@ -29,14 +29,14 @@ class TwoWireDiagnostics {
     /*! @brief Abstract away platform differences in Arduino wire library*/
     byte read8(byte address, byte reg); 
 
-  private:
-    /// @brief The [TwoWire] instance to diagnose.    
-    TwoWire &_i2c_wire;
-
     /// @brief Returns an address string from the [address].
     /// @param address The I2C address
     /// @return An address string from the [address].
     String getAddressString(byte address);
+
+  private:
+    /// @brief The [TwoWire] instance to diagnose.    
+    TwoWire &_i2c_wire;
 
   };
 
