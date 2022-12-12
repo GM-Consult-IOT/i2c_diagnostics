@@ -1,10 +1,15 @@
-# Two-wire (I2C) Diagnostics Library
+/**************************************************************************
+ * Provides utilities for diagnosing the I2C bus and devices on it.
 
-Provides utilities for diagnosing the I2C bus and devices on it.
+ * Aadapted from a sketch by Rui Santos 
+ * (https://randomnerdtutorials.com/esp32-i2c-communication-arduino-ide/#2). 
 
-Currently provides only the `devices` function:
+ * This library is open-source under the BSD 3-Clause license and 
+ * redistribution and use in source and binary forms, with or without 
+ * modification, are permitted, provided that the license conditions are 
+ * met.
+***************************************************************************/
 
-```C++
 #include <Arduino.h>
 #include <inttypes.h>
 #include <Wire.h> 
@@ -50,7 +55,3 @@ void loop() {
   // do nothing, then do it again
   delay(2000); // wait a bit
 }
-
-```
-
-This library is open-source under the [BSD 3-Clause license](https://github.com/GM-Consult-IOT/QMC6310_Unified/blob/master/LICENSE) and redistribution and use in source and binary forms, with or without modification, are permitted, provided that the license conditions are met. The I2C scan function was adapted from a sketch by [Rui Santos](https://randomnerdtutorials.com/esp32-i2c-communication-arduino-ide/#2). 
