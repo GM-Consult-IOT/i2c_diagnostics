@@ -125,3 +125,5 @@ String TwoWireDiagnostics::getAddressString(byte address){
       // add the address and return the string
       return addressStr+String(address, HEX);
 }
+
+TwoWireDiagnostics::TwoWireDiagnostics(TwoWire &i2c_wire):_i2c_wire(i2c_wire){};

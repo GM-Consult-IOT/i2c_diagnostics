@@ -16,7 +16,7 @@ class TwoWireDiagnostics {
   public:
 
     /// @param i2c_wire the [TwoWire] instance to diagnose.      
-    TwoWireDiagnostics(TwoWire &i2c_wire):_i2c_wire(i2c_wire){};
+    TwoWireDiagnostics(TwoWire &i2c_wire);
 
     /// @brief Poll all addresses on [i2c_wire] and populate a list of the addresses that respond.
     /// @param devices Array that will be populated with the addresses of the attached I2C devices.

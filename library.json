@@ -1,6 +1,6 @@
 {
     "name": "i2c_diagnostics",
-    "version": "0.0.1",
+    "version": "0.0.1+1",
     "description": "Provides utilities for diagnosing the I2C bus and devices on it.",
     "keywords": "I2C, TwoWire, Wire",
     "repository":
