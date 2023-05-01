@@ -60,7 +60,11 @@ void TwoWireDiagnostics::devices(byte devices[], bool echo){
       if (echo){
         Serial.println("Unknow error at address " + addressStr);
       }
-    }    
+    } else {
+      if (echo){
+      Serial.println("Error occurred: "+ String(error, HEX));
+      }
+    }   
   }
   if (nDevices == 0) {
     if (echo){
