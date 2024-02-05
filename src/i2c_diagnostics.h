@@ -11,7 +11,8 @@
 #include <Wire.h>
 #endif
 
-
+#ifndef TWO_WIRE_DIAGNOSTICS_H_
+#define TWO_WIRE_DIAGNOSTICS_H_
 class TwoWireDiagnostics {
   public:
 
@@ -40,3 +41,4 @@ class TwoWireDiagnostics {
 
   };
 
+#endif // TWO_WIRE_DIAGNOSTICS_H_
